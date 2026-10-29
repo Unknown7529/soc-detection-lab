@@ -9,8 +9,6 @@
 | Waktu deteksi | 2026-10-28 09:55:07 (WIB) |
 | MITRE ATT&CK | T1110.001 Password Guessing |
 
-> **Catatan penulis (hapus setelah diverifikasi):** bagian "Dampak" mengasumsikan tidak ada logon sukses dari IP penyerang. Cocokkan dengan [04-no-successful-logon-4624.png](../attack-simulation/brute-force/04-no-successful-logon-4624.png). Jika ternyata ada logon 4624, ubah kesimpulan dan rekomendasi (eskalasi segera).
-
 ## 1. Ringkasan
 
 Akun `administrator` pada host `Win10-SOC-LAB` menerima rentetan login gagal lewat jaringan (SMB, Logon Type 3) dari `192.168.229.1`. Pola ini sesuai password guessing. Serangan disimulasikan dari laptop host menggunakan loop `net use`.
@@ -50,7 +48,7 @@ Total event 4625 dari IP yang sama tercatat 66 sejak 2026-10-27 11:38:28 (bebera
 
 ## 6. Dampak
 
-Tidak ada bukti akun berhasil diambil alih (tidak ada 4624 dari IP penyerang).
+Tidak ada logon sukses (4624) dari IP penyerang, jadi tidak ada bukti akun berhasil diambil alih.
 
 ## 7. Rekomendasi
 
